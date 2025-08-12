@@ -184,8 +184,42 @@ useDynamicAdapt();
 -------------------------------------------------------------------------------------------*/
 const pondList = document.querySelector(".pond__list");
 if (pondList) {
-  console.log(Math.floor(pondList.children.length / 2).toString());
-  pondList.style.gridTemplateRows = `repeat(${Math.ceil(
-    pondList.children.length / 2
-  ).toString()}, 1fr)`;
+  console.log(screen.width);
+  if (screen.width >= 758) {
+    pondList.style.gridAutoFlow = "column";
+    pondList.style.gridTemplateRows = `repeat(${Math.ceil(
+      pondList.children.length / 2
+    ).toString()}, 1fr)`;
+    console.log(screen.width);
+  } else if (screen.width < 757 && screen.width > 550) {
+    pondList.style.gridAutoFlow = "row";
+    pondList.style.gridTemplateRows = `repeat(${pondList.children.length.toString()}, 1fr)`;
+  } else {
+    pondList.style.gridTemplateRows = `repeat(${(
+      pondList.children.length - 2
+    ).toString()}, 1fr)`;
+  }
 }
+
+/*-------------------------------------------------------------------------------------------
+-----------------------ДЛЯ ОТОБРАЖЕНИЯ ПРИ ТЕСТИРОВАНИИ!!!-----------------------------------
+-------------------------------------------------------------------------------------------*/
+window.addEventListener("resize", function (e) {
+  if (pondList) {
+    console.log(screen.width);
+    if (screen.width >= 758) {
+      pondList.style.gridAutoFlow = "column";
+      pondList.style.gridTemplateRows = `repeat(${Math.ceil(
+        pondList.children.length / 2
+      ).toString()}, 1fr)`;
+      console.log(screen.width);
+    } else if (screen.width < 757 && screen.width > 550) {
+      pondList.style.gridAutoFlow = "row";
+      pondList.style.gridTemplateRows = `repeat(${pondList.children.length.toString()}, 1fr)`;
+    } else {
+      pondList.style.gridTemplateRows = `repeat(${(
+        pondList.children.length - 2
+      ).toString()}, 1fr)`;
+    }
+  }
+});
