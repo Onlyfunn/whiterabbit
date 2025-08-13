@@ -82,6 +82,9 @@ div[class*="__container"] {
   color: #fff;
   line-height: 1.35;
   font-weight: 700;
+  span {
+    text-decoration: underline;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -105,6 +108,24 @@ div[class*="__container"] {
   margin-bottom: 8px;
   span {
     color: #28aae4;
+  }
+}
+
+.title-2 {
+  font-weight: 600;
+  color: #28aae4;
+  padding-top: 25px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 80%;
+    background-color: #28aae4;
   }
 }
 
@@ -611,6 +632,235 @@ div[class*="__container"] {
     height: 10%;
     @media (max-width: $md) {
       width: calc(90% - 15px);
+    }
+  }
+}
+
+/*-------------------------------------------------------------------------------------------
+------------------------------------------BEACH----------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+.beach {
+  padding: 100px 0;
+  &__container {
+    display: flex;
+    gap: 28px;
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
+  }
+
+  &__item-1 {
+    flex: 1 1 auto;
+  }
+
+  &__block-1 {
+  }
+
+  &__block-2 {
+  }
+
+  &__block-5 {
+  }
+
+  &__button {
+  }
+
+  &__item-2 {
+    flex: 0 0 381px;
+  }
+
+  &__block-3 {
+  }
+
+  &__block-6 {
+  }
+
+  &__block-4 {
+  }
+}
+.block-1-beach {
+  padding: 36px 38px;
+  position: relative;
+  margin-bottom: 30px;
+  width: 113%;
+  min-height: 447px;
+  @media (max-width: $md) {
+    padding: 13px 24px;
+  }
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    max-width: 378px;
+  }
+  picture {
+    display: block;
+  }
+}
+
+.block-2-beach {
+  position: relative;
+  min-height: 389px;
+  margin-bottom: 90px;
+  &__content {
+    width: 290px;
+    padding-right: 23px;
+    padding-bottom: 36px;
+    background-color: #fff;
+    max-height: fit-content;
+    position: relative;
+    z-index: 2;
+    @media (max-width: $md) {
+      flex: 0 0 257px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 93%;
+    height: 100%;
+    @media (max-width: $md) {
+      position: relative;
+      height: 290px;
+      flex: 1 1 auto;
+      padding-left: 20px;
+      padding-top: 20px;
+      background-color: #fff;
+      z-index: 2;
+      margin-top: -60px;
+      img {
+        padding-left: 20px;
+        padding-top: 20px;
+      }
+    }
+    @media (max-width: $sm) {
+      display: none;
+    }
+  }
+  @media (max-width: $md) {
+    display: flex;
+    min-height: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.block-5-beach {
+  margin-bottom: 33px;
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+  }
+  @media (max-width: $md) {
+    display: none;
+  }
+  @media (max-width: $sm) {
+    display: block;
+  }
+}
+
+.block-3-beach {
+  width: 73%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  @media (max-width: $sm) {
+    flex-direction: column;
+  }
+  &__content {
+    flex: 0 0 243px;
+  }
+  &__title {
+  }
+
+  &__text {
+    padding-bottom: 30px;
+  }
+  &__image {
+    position: relative;
+
+    @media (max-width: $md) {
+      flex: 1 1 auto;
+      height: 348px;
+      padding-top: 20px;
+      padding-right: 20px;
+      background-color: #fff;
+      margin-top: -100px;
+
+      img,
+      picture {
+        padding-right: 20px;
+        padding-top: 20px;
+        z-index: 1;
+      }
+    }
+  }
+  @media (max-width: $md) {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+.block-6-beach {
+  width: 100%;
+  height: 256px;
+  position: relative;
+  padding-left: 29px;
+  padding-top: 29px;
+  background-color: #fff;
+  z-index: 1;
+  margin-bottom: 40px;
+  @media (max-width: $md) {
+    display: none;
+  }
+  @media (max-width: $sm) {
+    display: block;
+  }
+  img {
+    padding-left: 29px;
+    padding-top: 29px;
+  }
+}
+.block-4-beach {
+  background-color: #fff;
+  padding-top: 29px;
+  padding-left: 29px;
+  @media (max-width: $md) {
+    padding-top: 0;
+    padding-left: 0;
+    margin-bottom: 35px;
+  }
+  &__text {
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  p:not(:last-child) {
+    margin-bottom: 23px;
+  }
+  b {
+    font-weight: 700;
+  }
+  i {
+    font-weight: 600;
+    font-style: italic;
+  }
+  a {
+    color: #28aae4;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
