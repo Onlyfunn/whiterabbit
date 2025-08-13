@@ -697,6 +697,7 @@ div[class*="__container"] {
   width: 113%;
   min-height: 447px;
   @media (max-width: $md) {
+    width: 100%;
     padding: 13px 24px;
     margin-bottom: 0;
   }
@@ -1406,6 +1407,170 @@ div[class*="__container"] {
     @media (max-width: $md) {
       order: 3;
       margin-left: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+  }
+}
+
+/*-------------------------------------------------------------------------------------------
+------------------------------------------CLUB-----------------------------------------------
+-------------------------------------------------------------------------------------------*/
+
+.club {
+  padding: 100px 0;
+  @media (max-width: $md) {
+    padding: 60px 0;
+  }
+  &__container {
+  }
+
+  &__top {
+    display: flex;
+    gap: 40px;
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
+  }
+
+  &__bottom {
+  }
+}
+.top-club {
+  &__item-1 {
+    flex: 0 1 50%;
+    position: relative;
+    padding: 35px;
+    height: 743px;
+    @media (max-width: $md) {
+      flex: 1 1 auto;
+      padding: 15px;
+      width: 80%;
+    }
+  }
+
+  &__content {
+  }
+
+  &__text {
+    color: #fff;
+    max-width: 430px;
+    &:before {
+      background-color: #fff;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    color: #fff;
+    max-width: 430px;
+  }
+
+  &__item-2 {
+    flex: 0 1 50%;
+    @media (max-width: $md) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__info-1 {
+    font-weight: 600;
+    @media (max-width: $md) {
+      display: none;
+    }
+    @media (max-width: $sm) {
+      display: block;
+    }
+  }
+
+  &__image {
+    position: relative;
+    margin-left: -90px;
+    z-index: 0;
+    background-color: #fff;
+    height: 477px;
+    img {
+      padding: 20px;
+    }
+    @media (max-width: $md) {
+      height: 450px;
+      margin-left: 0;
+      width: 80%;
+      margin-top: -143px;
+      margin-left: auto;
+      img {
+        padding: 37px;
+        padding-right: 0;
+      }
+    }
+    @media (max-width: $sm) {
+      height: 246px;
+      margin-top: -100px;
+      img {
+        padding: 23px;
+      }
+    }
+  }
+
+  &__info-2 {
+    padding-bottom: 100px;
+    @media (max-width: $md) {
+      padding-bottom: 0;
+      width: 100%;
+    }
+    @media (max-width: $sm) {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+.bottom-club {
+  display: flex;
+  gap: 10px;
+  margin-top: -100px;
+  @media (max-width: $md) {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  @media (max-width: $sm) {
+    gap: 26px;
+  }
+  &__image {
+    flex: 0 1 60%;
+    position: relative;
+    z-index: 0;
+    height: 370px;
+    background-color: #fff;
+    margin-left: 30px;
+    @media (max-width: $md) {
+      flex: 1 1 auto;
+      width: 75%;
+      margin-right: auto;
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    @media (max-width: $sm) {
+      width: 100%;
+      height: 317px;
+    }
+    img {
+      padding: 20px;
+      @media (max-width: $md) {
+        padding: 0;
+      }
+    }
+  }
+
+  &__info {
+    flex: 0 1 40%;
+    padding-top: 20px;
+    @media (max-width: $md) {
+      flex: 1 1 auto;
     }
   }
 
