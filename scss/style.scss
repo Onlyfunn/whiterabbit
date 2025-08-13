@@ -649,9 +649,7 @@ div[class*="__container"] {
   @media (max-width: $md) {
     padding: 60px 0;
   }
-  @media (max-width: $sm) {
-    padding: 30px 0;
-  }
+
   &__container {
     display: flex;
     gap: 28px;
@@ -920,9 +918,7 @@ div[class*="__container"] {
   @media (max-width: $md) {
     padding: 60px 0;
   }
-  @media (max-width: $sm) {
-    padding: 30px 0;
-  }
+
   &__container {
   }
 
@@ -1006,6 +1002,9 @@ div[class*="__container"] {
       margin-left: auto;
       margin-top: -111px;
     }
+    @media (max-width: $sm) {
+      width: 90%;
+    }
   }
 }
 
@@ -1013,6 +1012,9 @@ div[class*="__container"] {
   margin-top: 47px;
   @media (max-width: $md) {
     flex-direction: column;
+  }
+  @media (max-width: $sm) {
+    margin-top: 26px;
   }
   &__description {
     position: relative;
@@ -1023,6 +1025,10 @@ div[class*="__container"] {
       flex: 1 1 auto;
       margin-right: auto;
       margin-top: -240px;
+      padding: 10px;
+    }
+    @media (max-width: $sm) {
+      margin-top: 0;
     }
   }
 
@@ -1051,6 +1057,12 @@ div[class*="__container"] {
     padding-left: 20px;
     @media (max-width: $md) {
       flex: 1 1 auto;
+      margin-left: auto;
+      width: 73%;
+      margin-top: -40px;
+    }
+    @media (max-width: $sm) {
+      width: 90%;
     }
   }
 
@@ -1064,12 +1076,21 @@ div[class*="__container"] {
     z-index: 0;
     img {
       padding: 27px 27px 0 27px;
+      @media (max-width: $md) {
+        padding: 0;
+      }
     }
     @media (max-width: $md) {
       position: relative;
+      height: 375px;
       left: 0;
-      width: 70%;
+      width: 80%;
       transform: none;
+      margin-right: auto;
+      margin-top: -50px;
+    }
+    @media (max-width: $sm) {
+      width: 100%;
     }
   }
 }

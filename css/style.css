@@ -671,11 +671,6 @@ div[class*=__container] {
     padding: 60px 0;
   }
 }
-@media (max-width: 483px) {
-  .beach {
-    padding: 30px 0;
-  }
-}
 .beach__container {
   display: flex;
   gap: 28px;
@@ -947,11 +942,6 @@ div[class*=__container] {
     padding: 60px 0;
   }
 }
-@media (max-width: 483px) {
-  .house {
-    padding: 30px 0;
-  }
-}
 .house__item-1 {
   display: flex;
   flex-wrap: wrap;
@@ -1034,6 +1024,11 @@ div[class*=__container] {
     margin-top: -111px;
   }
 }
+@media (max-width: 483px) {
+  .item-1-house__image {
+    width: 90%;
+  }
+}
 
 .item-2-house {
   margin-top: 47px;
@@ -1041,6 +1036,11 @@ div[class*=__container] {
 @media (max-width: 758px) {
   .item-2-house {
     flex-direction: column;
+  }
+}
+@media (max-width: 483px) {
+  .item-2-house {
+    margin-top: 26px;
   }
 }
 .item-2-house__description {
@@ -1054,6 +1054,12 @@ div[class*=__container] {
     flex: 1 1 auto;
     margin-right: auto;
     margin-top: -240px;
+    padding: 10px;
+  }
+}
+@media (max-width: 483px) {
+  .item-2-house__description {
+    margin-top: 0;
   }
 }
 .item-2-house__title {
@@ -1086,6 +1092,14 @@ div[class*=__container] {
 @media (max-width: 758px) {
   .item-2-house__text-2 {
     flex: 1 1 auto;
+    margin-left: auto;
+    width: 73%;
+    margin-top: -40px;
+  }
+}
+@media (max-width: 483px) {
+  .item-2-house__text-2 {
+    width: 90%;
   }
 }
 .item-2-house__image {
@@ -1101,10 +1115,23 @@ div[class*=__container] {
   padding: 27px 27px 0 27px;
 }
 @media (max-width: 758px) {
+  .item-2-house__image img {
+    padding: 0;
+  }
+}
+@media (max-width: 758px) {
   .item-2-house__image {
     position: relative;
+    height: 375px;
     left: 0;
-    width: 70%;
+    width: 80%;
     transform: none;
+    margin-right: auto;
+    margin-top: -50px;
+  }
+}
+@media (max-width: 483px) {
+  .item-2-house__image {
+    width: 100%;
   }
 }
