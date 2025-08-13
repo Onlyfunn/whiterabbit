@@ -66,6 +66,8 @@ div[class*=__container] {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   z-index: -1;
 }
 
@@ -660,6 +662,19 @@ div[class*=__container] {
 -------------------------------------------------------------------------------------------*/
 .beach {
   padding: 100px 0;
+  background-color: #f4f4f4;
+  position: relative;
+  z-index: 0;
+}
+@media (max-width: 758px) {
+  .beach {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 483px) {
+  .beach {
+    padding: 30px 0;
+  }
 }
 .beach__container {
   display: flex;
@@ -686,6 +701,7 @@ div[class*=__container] {
 @media (max-width: 758px) {
   .block-1-beach {
     padding: 13px 24px;
+    margin-bottom: 0;
   }
 }
 .block-1-beach__title {
@@ -707,7 +723,7 @@ div[class*=__container] {
   width: 290px;
   padding-right: 23px;
   padding-bottom: 36px;
-  background-color: #fff;
+  background-color: #f4f4f4;
   max-height: -moz-fit-content;
   max-height: fit-content;
   position: relative;
@@ -718,6 +734,13 @@ div[class*=__container] {
     flex: 0 0 257px;
   }
 }
+@media (max-width: 483px) {
+  .block-2-beach__content {
+    flex: 1 1 auto;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+}
 .block-2-beach__title {
   margin-bottom: 10px;
 }
@@ -725,7 +748,7 @@ div[class*=__container] {
   position: absolute;
   top: 0;
   right: 0;
-  width: 93%;
+  width: 80%;
   height: 100%;
 }
 @media (max-width: 758px) {
@@ -735,7 +758,6 @@ div[class*=__container] {
     flex: 1 1 auto;
     padding-left: 20px;
     padding-top: 20px;
-    background-color: #fff;
     z-index: 2;
     margin-top: -60px;
   }
@@ -785,8 +807,19 @@ div[class*=__container] {
     flex-direction: column;
   }
 }
+@media (max-width: 483px) {
+  .block-3-beach {
+    flex: 0 1 60%;
+  }
+}
 .block-3-beach__content {
   flex: 0 0 243px;
+}
+@media (max-width: 483px) {
+  .block-3-beach__content {
+    flex: 1 1 auto;
+    max-width: 60%;
+  }
 }
 .block-3-beach__text {
   padding-bottom: 30px;
@@ -810,6 +843,20 @@ div[class*=__container] {
     z-index: 1;
   }
 }
+@media (max-width: 758px) and (max-width: 483px) {
+  .block-3-beach__image img,
+  .block-3-beach__image picture {
+    padding-right: 0;
+    padding-top: 0;
+  }
+}
+@media (max-width: 483px) {
+  .block-3-beach__image {
+    margin-top: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+}
 @media (max-width: 758px) {
   .block-3-beach {
     margin-left: 0;
@@ -823,7 +870,7 @@ div[class*=__container] {
   position: relative;
   padding-left: 29px;
   padding-top: 29px;
-  background-color: #fff;
+  background-color: #f4f4f4;
   z-index: 1;
   margin-bottom: 40px;
 }
@@ -835,17 +882,31 @@ div[class*=__container] {
 @media (max-width: 483px) {
   .block-6-beach {
     display: block;
+    width: 90%;
+    padding-right: 20px;
+    padding-top: 200px;
+    padding-left: 0;
+    margin-top: -40px;
+    margin-bottom: 20px;
   }
 }
 .block-6-beach img {
   padding-left: 29px;
   padding-top: 29px;
 }
+@media (max-width: 483px) {
+  .block-6-beach img {
+    padding-left: 0;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+}
 
 .block-4-beach {
   background-color: #fff;
   padding-top: 29px;
   padding-left: 29px;
+  background-color: #f4f4f4;
 }
 @media (max-width: 758px) {
   .block-4-beach {
@@ -873,4 +934,177 @@ div[class*=__container] {
 }
 .block-4-beach a:hover {
   text-decoration: underline;
+}
+
+/*-------------------------------------------------------------------------------------------
+-------------------------------------------HOUSE---------------------------------------------
+-------------------------------------------------------------------------------------------*/
+.house {
+  padding: 80px 0;
+}
+@media (max-width: 758px) {
+  .house {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 483px) {
+  .house {
+    padding: 30px 0;
+  }
+}
+.house__item-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+@media (max-width: 758px) {
+  .house__item-1 {
+    flex-direction: column;
+  }
+}
+.house__item-2 {
+  display: flex;
+  align-items: end;
+}
+
+.item-1-house__info {
+  height: 436px;
+  flex: 0 1 63%;
+  padding: 35px;
+  position: relative;
+}
+@media (max-width: 758px) {
+  .item-1-house__info {
+    flex: 1 1 auto;
+    order: 2;
+  }
+}
+.item-1-house__info-text {
+  font-weight: 600;
+  color: #fff;
+  max-width: 376px;
+}
+.item-1-house__description {
+  flex: 0 1 37%;
+  padding-bottom: 300px;
+}
+@media (max-width: 758px) {
+  .item-1-house__description {
+    flex: 1 1 auto;
+    order: 1;
+    margin-left: auto;
+    margin-bottom: 10px;
+    padding-bottom: 0;
+  }
+}
+.item-1-house__text {
+  color: #000;
+  max-width: 376px;
+  margin-left: 30px;
+}
+.item-1-house__text::before {
+  height: 100%;
+  background-color: #000;
+}
+.item-1-house__title {
+  color: #000;
+}
+.item-1-house__image {
+  flex: 0 1 500px;
+  height: 350px;
+  position: relative;
+  margin-top: -320px;
+  padding-left: 24px;
+  padding-top: 24px;
+  background-color: #fff;
+  z-index: 0;
+}
+.item-1-house__image img {
+  padding-left: 24px;
+  padding-top: 24px;
+}
+@media (max-width: 758px) {
+  .item-1-house__image {
+    flex: 1 1 auto;
+    order: 3;
+    margin-top: 0;
+    width: 55%;
+    height: 330px;
+    margin-left: auto;
+    margin-top: -111px;
+  }
+}
+
+.item-2-house {
+  margin-top: 47px;
+}
+@media (max-width: 758px) {
+  .item-2-house {
+    flex-direction: column;
+  }
+}
+.item-2-house__description {
+  position: relative;
+  z-index: 1;
+  flex: 0 1 28%;
+  background-color: #fff;
+}
+@media (max-width: 758px) {
+  .item-2-house__description {
+    flex: 1 1 auto;
+    margin-right: auto;
+    margin-top: -240px;
+  }
+}
+.item-2-house__title {
+  margin-bottom: 10px;
+  max-width: 319px;
+}
+@media (max-width: 758px) {
+  .item-2-house__title {
+    max-width: 310px;
+  }
+}
+.item-2-house__text {
+  line-height: 200%;
+  max-width: 319px;
+}
+@media (max-width: 758px) {
+  .item-2-house__text {
+    max-width: 310px;
+  }
+}
+.item-2-house__text-2 {
+  position: relative;
+  z-index: 1;
+  flex: 0 1 47%;
+  margin-left: auto;
+  background-color: #fff;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+@media (max-width: 758px) {
+  .item-2-house__text-2 {
+    flex: 1 1 auto;
+  }
+}
+.item-2-house__image {
+  height: 400px;
+  position: absolute;
+  width: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  z-index: 0;
+}
+.item-2-house__image img {
+  padding: 27px 27px 0 27px;
+}
+@media (max-width: 758px) {
+  .item-2-house__image {
+    position: relative;
+    left: 0;
+    width: 70%;
+    transform: none;
+  }
 }
