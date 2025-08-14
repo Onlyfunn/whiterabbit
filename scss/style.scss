@@ -27,14 +27,14 @@ body {
   color: #000;
 }
 
-.wrapper {
+.wrapper1 {
   display: flex;
   flex-direction: column;
   min-height: 100%;
   overflow-x: hidden;
 }
 
-.main {
+.main1 {
   flex: 1 1 auto;
 }
 
@@ -336,6 +336,7 @@ div[class*="__container"] {
   }
 
   &__text {
+    max-width: 400px;
   }
 
   &__link {
@@ -397,6 +398,7 @@ div[class*="__container"] {
     padding: 38px;
     border: 6px #28aae4 solid;
     counter-reset: main;
+    background-color: #fff;
     @media (max-width: 550px) {
       gap: 10px;
       padding: 10px;
@@ -576,15 +578,13 @@ div[class*="__container"] {
     right: 15px;
     height: 198px;
     width: 25%;
-    &::before {
-      content: "";
-      position: absolute;
-      top: -20px;
-      left: -20px;
-      width: 110%;
-      height: 110%;
-      background-color: #fff;
-      z-index: -1;
+    position: relative;
+    z-index: 0;
+    background-color: #fff;
+
+    img {
+      padding-top: 20px;
+      padding-left: 20px;
     }
     @media (max-width: $md) {
       left: 15px;
@@ -592,19 +592,21 @@ div[class*="__container"] {
       height: 198px;
       width: 43%;
       z-index: 2;
-      &::before {
-        left: auto;
-        right: -20px;
+      bottom: -20px;
+      img {
+        padding-left: 0;
+        padding-right: 20px;
+        padding-bottom: 20px;
       }
     }
     @media (max-width: $sm) {
       height: 198px;
       width: 65%;
       top: 540px;
-      &::before {
-        top: -14px;
-        left: auto;
-        right: -14px;
+      img {
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 0;
       }
     }
   }
@@ -637,6 +639,9 @@ div[class*="__container"] {
     @media (max-width: $md) {
       width: calc(90% - 15px);
     }
+    @media (max-width: $sm) {
+      bottom: 30px;
+    }
   }
 }
 
@@ -655,8 +660,9 @@ div[class*="__container"] {
 
   &__container {
     display: flex;
-    gap: 28px;
+
     @media (max-width: $md) {
+      gap: 30px;
       flex-direction: column;
     }
   }
@@ -749,9 +755,10 @@ div[class*="__container"] {
     right: 0;
     width: 80%;
     height: 100%;
-
     @media (max-width: $md) {
       position: relative;
+      background-color: #f4f4f4;
+
       height: 290px;
       flex: 1 1 auto;
       padding-left: 20px;
@@ -809,6 +816,12 @@ div[class*="__container"] {
     }
   }
   &__title {
+    @media (max-width: $md) {
+      margin-top: 50px;
+    }
+    @media (max-width: $sm) {
+      margin-top: 0;
+    }
   }
 
   &__text {
@@ -822,8 +835,8 @@ div[class*="__container"] {
       height: 348px;
       padding-top: 20px;
       padding-right: 20px;
-      background-color: #fff;
-      margin-top: -100px;
+      background-color: #f4f4f4;
+      margin-top: -50px;
 
       img,
       picture {
@@ -972,7 +985,7 @@ div[class*="__container"] {
 
   &__text {
     color: #000;
-    max-width: 376px;
+    max-width: 330px;
     margin-left: 30px;
     &::before {
       height: 100%;
@@ -1105,6 +1118,9 @@ div[class*="__container"] {
 
 .embankment {
   padding: 100px 0;
+  background-color: #f4f4f4;
+  position: relative;
+  z-index: 0;
   @media (max-width: $md) {
     padding: 60px 0;
   }
@@ -1175,7 +1191,7 @@ div[class*="__container"] {
 
     position: relative;
     z-index: 0;
-    background-color: #fff;
+    background-color: #f4f4f4;
     margin-left: 10%;
     margin-top: -5%;
     img {
@@ -1210,7 +1226,7 @@ div[class*="__container"] {
     height: 381px;
     position: relative;
     z-index: 0;
-    background-color: #fff;
+    background-color: #f4f4f4;
     margin-top: -10%;
     img {
       padding: 22px;
@@ -1239,7 +1255,7 @@ div[class*="__container"] {
 -------------------------------------------------------------------------------------------*/
 
 .lighthouse {
-  background-color: #f4f4f4;
+  background-color: #ebebeb;
 
   padding: 120px 0;
   @media (max-width: $md) {
@@ -1266,6 +1282,8 @@ div[class*="__container"] {
   }
   &__content {
     flex: 0 0 390px;
+    padding-bottom: 100px;
+
     @media (max-width: $md) {
       flex: 1 1 auto;
     }
@@ -1275,7 +1293,6 @@ div[class*="__container"] {
     font-weight: 700;
     color: #000;
     max-width: 100%;
-    padding-bottom: 100px;
     @media (max-width: $md) {
       padding-bottom: 0;
     }
@@ -1329,6 +1346,9 @@ div[class*="__container"] {
   }
   &__item-1 {
     flex: 1 1 45%;
+    p {
+      padding-bottom: 20px;
+    }
     @media (max-width: $md) {
       order: 2;
       flex: 1 1 auto;
@@ -1338,7 +1358,7 @@ div[class*="__container"] {
       p {
         padding-top: 60px;
         padding-left: 55px;
-        padding-bottom: 55px;
+        padding-bottom: 35px;
         flex: 0 1 55%;
       }
     }
@@ -1363,7 +1383,7 @@ div[class*="__container"] {
     z-index: 1;
     height: 230px;
     margin-bottom: 38px;
-    background: #f4f4f4;
+    background: #ebebeb;
     margin-right: -50px;
     img {
       padding-top: 22px;
@@ -1384,7 +1404,7 @@ div[class*="__container"] {
   &__item-2 {
     position: relative;
     z-index: 0;
-    background: #f4f4f4;
+    background-color: #ebebeb;
     flex: 0 1 45%;
     img {
       padding: 22px;
@@ -1404,9 +1424,11 @@ div[class*="__container"] {
   &__item-3 {
     flex: 0 1 75%;
     margin-left: 30px;
+    padding-bottom: 20px;
     @media (max-width: $md) {
       order: 3;
       margin-left: 0;
+      padding-bottom: 0;
     }
   }
 
@@ -1452,6 +1474,9 @@ div[class*="__container"] {
       padding: 15px;
       width: 80%;
     }
+    @media (max-width: $sm) {
+      width: 100%;
+    }
   }
 
   &__content {
@@ -1480,11 +1505,13 @@ div[class*="__container"] {
 
   &__info-1 {
     font-weight: 600;
+    max-width: 500px;
     @media (max-width: $md) {
       display: none;
     }
     @media (max-width: $sm) {
       display: block;
+      max-width: 100%;
     }
   }
 
@@ -1519,7 +1546,9 @@ div[class*="__container"] {
 
   &__info-2 {
     padding-bottom: 100px;
+    max-width: 536px;
     @media (max-width: $md) {
+      max-width: 100%;
       padding-bottom: 0;
       width: 100%;
     }
@@ -1532,7 +1561,7 @@ div[class*="__container"] {
 .bottom-club {
   display: flex;
   gap: 10px;
-  margin-top: -100px;
+  margin-top: -115px;
   @media (max-width: $md) {
     flex-direction: column;
     margin-top: 0;
@@ -1544,7 +1573,7 @@ div[class*="__container"] {
     flex: 0 1 60%;
     position: relative;
     z-index: 0;
-    height: 370px;
+    height: 410px;
     background-color: #fff;
     margin-left: 30px;
     @media (max-width: $md) {
